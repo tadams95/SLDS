@@ -1,0 +1,81 @@
+<!-- Sidebar Navigation -->
+<nav class="slds-nav-vertical" aria-label="Sidebar">
+  <div class="slds-nav-vertical__section">
+    <h2 class="slds-nav-vertical__title">Navigation</h2>
+    <ul>
+      <li class="slds-nav-vertical__item slds-is-active">
+        <a href="#" class="slds-nav-vertical__action">Dashboard</a>
+      </li>
+      <li class="slds-nav-vertical__item">
+        <a href="#" class="slds-nav-vertical__action">Opportunities</a>
+      </li>
+      <li class="slds-nav-vertical__item">
+        <a href="#" class="slds-nav-vertical__action">Accounts</a>
+      </li>
+      <li class="slds-nav-vertical__item">
+        <a href="#" class="slds-nav-vertical__action">Contacts</a>
+      </li>
+      <li class="slds-nav-vertical__item">
+        <a href="#" class="slds-nav-vertical__action">Reports</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Card Component -->
+<div class="slds-card slds-m-top_medium">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-account">
+          <svg class="slds-icon slds-icon_small" aria-hidden="true">
+            <use
+              xlink:href="node_modules/@salesforce-ux/design-system/assets/icons/standard-sprite/svg/symbols.svg#metrics"
+            ></use>
+          </svg>
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h2 class="slds-card__header-title">
+          <a href="#" class="slds-card__header-link slds-truncate">
+            Key Metrics
+          </a>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <div class="slds-grid slds-gutters slds-wrap">
+      <div class="slds-col slds-size_1-of-2">
+        <div class="slds-text-title_caps">Total Leads</div>
+        <div class="slds-text-heading_large">245</div>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <div class="slds-text-title_caps">Conversion</div>
+        <div class="slds-text-heading_large">18%</div>
+      </div>
+    </div>
+  </div>
+  <footer class="slds-card__footer">
+    <a href="#">View All</a>
+  </footer>
+</div>
+
+<!-- Spinner Component -->
+<div
+  class="slds-card slds-m-top_medium slds-p-around_medium slds-align_absolute-center"
+>
+  <div class="slds-text-title_caps slds-m-bottom_small">
+    Data Loading Example
+  </div>
+  <div class="slds-spinner_container">
+    <div
+      role="status"
+      class="slds-spinner slds-spinner_medium slds-spinner_brand"
+    >
+      <span class="slds-assistive-text">Loading</span>
+      <div class="slds-spinner__dot-a"></div>
+      <div class="slds-spinner__dot-b"></div>
+    </div>
+  </div>
+</div>

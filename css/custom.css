@@ -1,0 +1,89 @@
+/* Custom styles for SLDS demo */
+
+/* Add extra spacing to the main container */
+body {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make footer stick to bottom */
+footer {
+  margin-top: auto;
+}
+
+/* Custom card styling */
+.slds-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.slds-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Custom hover effect for navigation items */
+.slds-nav-vertical__action:hover {
+  background-color: #f4f6f9;
+  transition: background-color 0.2s ease;
+  border-left: 3px solid #0070d2;
+  padding-left: calc(0.75rem - 3px); /* Adjust padding to accommodate border */
+}
+
+/* Custom styling for the header */
+.slds-global-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom button hover effects */
+.slds-button:not(.slds-button_icon):hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+/* Toast notification animation */
+.slds-notify_container {
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Custom styling for tabs */
+.slds-tabs_default__link {
+  transition: all 0.2s ease;
+}
+
+.slds-tabs_default__link:hover {
+  color: #0070d2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slds-page-header__col-actions {
+    margin-top: 0.5rem;
+  }
+
+  .slds-form-element_horizontal {
+    display: block;
+  }
+
+  .slds-form-element_horizontal .slds-form-element__label {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    padding-right: 0;
+  }
+}

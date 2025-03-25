@@ -1,0 +1,428 @@
+<!-- Tabs Component -->
+<div class="slds-tabs_default">
+  <ul class="slds-tabs_default__nav" role="tablist">
+    <li
+      class="slds-tabs_default__item slds-is-active"
+      title="Overview"
+      role="presentation"
+    >
+      <a
+        class="slds-tabs_default__link"
+        href="#overview"
+        role="tab"
+        tabindex="0"
+        aria-selected="true"
+        >Overview</a
+      >
+    </li>
+    <li class="slds-tabs_default__item" title="Details" role="presentation">
+      <a
+        class="slds-tabs_default__link"
+        href="#details"
+        role="tab"
+        tabindex="-1"
+        aria-selected="false"
+        >Details</a
+      >
+    </li>
+    <li class="slds-tabs_default__item" title="Settings" role="presentation">
+      <a
+        class="slds-tabs_default__link"
+        href="#settings"
+        role="tab"
+        tabindex="-1"
+        aria-selected="false"
+        >Settings</a
+      >
+    </li>
+  </ul>
+  <div class="slds-tabs_default__content slds-show" id="overview">
+    <!-- Add notification component for better user feedback -->
+    <div class="slds-notify_container slds-is-relative">
+      <div
+        class="slds-notify slds-notify_toast slds-theme_success"
+        role="status"
+      >
+        <span class="slds-assistive-text">success</span>
+        <span
+          class="slds-icon_container slds-icon-utility-success slds-m-right_small"
+          title="Description of icon"
+        >
+          <svg class="slds-icon slds-icon_small" aria-hidden="true">
+            <use
+              xlink:href="node_modules/@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg#success"
+            ></use>
+          </svg>
+        </span>
+        <div class="slds-notify__content">
+          <h2 class="slds-text-heading_small">
+            Dashboard updated successfully.
+          </h2>
+        </div>
+        <button
+          class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse"
+          title="Close"
+        >
+          <svg
+            class="slds-button__icon slds-button__icon_large"
+            aria-hidden="true"
+          >
+            <use
+              xlink:href="node_modules/@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg#close"
+            ></use>
+          </svg>
+          <span class="slds-assistive-text">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Data Table Component -->
+    <div class="slds-m-bottom_medium slds-p-top_medium">
+      <h2 class="slds-text-heading_medium slds-p-bottom_small">
+        Recent Opportunities
+        <span class="slds-badge slds-badge_lightest">3 items</span>
+      </h2>
+      <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+          <tr class="slds-line-height_reset">
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Opportunity Name">
+                Opportunity Name
+              </div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Account">Account</div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Amount">Amount</div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Stage">Stage</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="slds-hint-parent">
+            <td data-label="Opportunity Name">
+              <div class="slds-truncate" title="Acme - 200 Widgets">
+                Acme - 200 Widgets
+              </div>
+            </td>
+            <td data-label="Account">
+              <div class="slds-truncate" title="Acme">Acme</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate" title="$42,000">$42,000</div>
+            </td>
+            <td data-label="Stage">
+              <div class="slds-truncate" title="Negotiation">Negotiation</div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <td data-label="Opportunity Name">
+              <div class="slds-truncate" title="Salesforce Implementation">
+                Salesforce Implementation
+              </div>
+            </td>
+            <td data-label="Account">
+              <div class="slds-truncate" title="Global Media">Global Media</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate" title="$105,000">$105,000</div>
+            </td>
+            <td data-label="Stage">
+              <div class="slds-truncate" title="Closed Won">Closed Won</div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <td data-label="Opportunity Name">
+              <div class="slds-truncate" title="Annual Renewal">
+                Annual Renewal
+              </div>
+            </td>
+            <td data-label="Account">
+              <div class="slds-truncate" title="Universal Tech">
+                Universal Tech
+              </div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate" title="$75,000">$75,000</div>
+            </td>
+            <td data-label="Stage">
+              <div class="slds-truncate" title="Qualification">
+                Qualification
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Form Component -->
+    <div class="slds-form slds-p-top_medium slds-border_top">
+      <h2 class="slds-text-heading_medium slds-p-bottom_small">
+        Create New Lead
+      </h2>
+
+      <div class="slds-form-element slds-form-element_horizontal">
+        <label class="slds-form-element__label" for="name">
+          <abbr class="slds-required" title="required">*</abbr>Name
+        </label>
+        <div class="slds-form-element__control">
+          <input
+            type="text"
+            id="name"
+            required
+            class="slds-input"
+            placeholder="Enter name"
+          />
+        </div>
+      </div>
+
+      <div
+        class="slds-form-element slds-form-element_horizontal slds-has-error"
+      >
+        <label class="slds-form-element__label" for="company">
+          <abbr class="slds-required" title="required">*</abbr>Company
+        </label>
+        <div class="slds-form-element__control">
+          <input
+            type="text"
+            id="company"
+            aria-describedby="error-company"
+            required
+            class="slds-input"
+            placeholder="Enter company name"
+          />
+        </div>
+        <div class="slds-form-element__help" id="error-company">
+          This field is required
+        </div>
+      </div>
+
+      <div class="slds-form-element slds-form-element_horizontal">
+        <label class="slds-form-element__label" for="email">Email</label>
+        <div class="slds-form-element__control">
+          <input
+            type="email"
+            id="email"
+            class="slds-input"
+            placeholder="Enter email"
+          />
+        </div>
+      </div>
+
+      <div class="slds-form-element slds-form-element_horizontal">
+        <label class="slds-form-element__label" for="status">Status</label>
+        <div class="slds-form-element__control">
+          <div class="slds-select_container">
+            <select id="status" class="slds-select">
+              <option>New</option>
+              <option>Working</option>
+              <option>Qualified</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="slds-form-element slds-form-element_horizontal">
+        <label class="slds-form-element__label" for="notes">Notes</label>
+        <div class="slds-form-element__control">
+          <textarea
+            id="notes"
+            class="slds-textarea"
+            placeholder="Add any additional notes"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="slds-form-element slds-form-element_horizontal">
+        <div class="slds-form-element__control">
+          <div class="slds-checkbox">
+            <input
+              type="checkbox"
+              name="options"
+              id="newsletter"
+              value="newsletter"
+            />
+            <label class="slds-checkbox__label" for="newsletter">
+              <span class="slds-checkbox_faux"></span>
+              <span class="slds-form-element__label"
+                >Subscribe to newsletter</span
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="slds-form-element slds-form-element_horizontal">
+        <div class="slds-form-element__control">
+          <button class="slds-button slds-button_brand">Save</button>
+          <button class="slds-button slds-button_neutral">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Details Tab Content -->
+  <div class="slds-tabs_default__content slds-hide" id="details">
+    <div class="slds-illustration slds-illustration_small">
+      <svg
+        class="slds-illustration__svg"
+        viewBox="0 0 454 172"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-65.000000, -89.000000)">
+            <g>
+              <g transform="translate(67.000000, 266.000000)" fill="#FFFFFF">
+                <path
+                  d="M20,0 L392,0 C402.457,0 411,8.543 411,19 L411,111 C411,121.457 402.457,130 392,130 L20,130 C9.543,130 1,121.457 1,111 L1,19 C1,8.543 9.543,0 20,0 Z"
+                  class="slds-illustration__stroke-secondary"
+                  stroke-width="2"
+                ></path>
+              </g>
+              <g transform="translate(145.000000, 133.000000)">
+                <g>
+                  <circle
+                    vector-effect="non-scaling-stroke"
+                    class="slds-illustration__fill-secondary"
+                    fill="#FFFFFF"
+                    cx="64"
+                    cy="64"
+                    r="23"
+                  ></circle>
+                  <circle
+                    vector-effect="non-scaling-stroke"
+                    class="slds-illustration__stroke-secondary"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#FFFFFF"
+                    cx="64"
+                    cy="64"
+                    r="23"
+                  ></circle>
+                  <circle
+                    vector-effect="non-scaling-stroke"
+                    class="slds-illustration__fill-secondary"
+                    fill="#FFFFFF"
+                    cx="64"
+                    cy="64"
+                    r="15"
+                  ></circle>
+                </g>
+              </g>
+              <g transform="translate(404.500000, 214.500000)">
+                <g class="slds-illustration__fill-secondary">
+                  <circle
+                    vector-effect="non-scaling-stroke"
+                    cx="15.5"
+                    cy="15.5"
+                    r="15.5"
+                  ></circle>
+                </g>
+              </g>
+              <g transform="translate(74.000000, 104.000000)">
+                <g transform="translate(10.000000, 32.000000)" fill="#FFFFFF">
+                  <path
+                    vector-effect="non-scaling-stroke"
+                    d="M13.5,0 L221.5,0 C228.404,0 234,5.596 234,12.5 L234,79.5 C234,86.404 228.404,92 221.5,92 L13.5,92 C6.596,92 1,86.404 1,79.5 L1,12.5 C1,5.596 6.596,0 13.5,0 Z"
+                    class="slds-illustration__stroke-primary"
+                    stroke-width="3"
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <div class="slds-text-longform">
+        <h3 class="slds-text-heading_medium">Select an item to view details</h3>
+        <p class="slds-text-body_regular">
+          Click on any item in the table to view detailed information.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Tab Content -->
+  <div class="slds-tabs_default__content slds-hide" id="settings">
+    <div class="slds-p-around_medium">
+      <h2 class="slds-text-heading_medium slds-p-bottom_small">Settings</h2>
+
+      <div class="slds-form">
+        <div class="slds-form-element slds-form-element_horizontal">
+          <label class="slds-form-element__label" for="theme">Theme</label>
+          <div class="slds-form-element__control">
+            <div class="slds-select_container">
+              <select id="theme" class="slds-select">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="system">System Default</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-form-element slds-form-element_horizontal">
+          <label class="slds-form-element__label" for="density"
+            >Display Density</label
+          >
+          <div class="slds-form-element__control">
+            <div class="slds-select_container">
+              <select id="density" class="slds-select">
+                <option value="comfortable">Comfortable</option>
+                <option value="compact">Compact</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-form-element slds-form-element_horizontal">
+          <label class="slds-form-element__label">Notifications</label>
+          <div class="slds-form-element__control">
+            <div class="slds-checkbox">
+              <input
+                type="checkbox"
+                name="options"
+                id="email-notif"
+                value="email-notif"
+                checked
+              />
+              <label class="slds-checkbox__label" for="email-notif">
+                <span class="slds-checkbox_faux"></span>
+                <span class="slds-form-element__label"
+                  >Email notifications</span
+                >
+              </label>
+            </div>
+            <div class="slds-checkbox">
+              <input
+                type="checkbox"
+                name="options"
+                id="push-notif"
+                value="push-notif"
+                checked
+              />
+              <label class="slds-checkbox__label" for="push-notif">
+                <span class="slds-checkbox_faux"></span>
+                <span class="slds-form-element__label">Push notifications</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-form-element slds-form-element_horizontal">
+          <div class="slds-form-element__control">
+            <button class="slds-button slds-button_brand">Save Settings</button>
+            <button class="slds-button slds-button_neutral">
+              Reset to Default
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

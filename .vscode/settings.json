@@ -1,0 +1,36 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.sfdx": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "html.format.wrapAttributes": "force-aligned",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "liveServer.settings.port": 5501,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "css.validate": true,
+  "html.validate.scripts": true,
+  "html.validate.styles": true,
+  "html-css-class-completion.enableEmmetSupport": true,
+  
+  // SLDS specific snippets
+  "html.suggest.html5": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.snippetSuggestions": "top"
+}
